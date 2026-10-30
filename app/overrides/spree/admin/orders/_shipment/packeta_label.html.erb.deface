@@ -1,0 +1,10 @@
+<!-- insert_bottom '[data-hook="admin_shipment_form"]' -->
+<% if shipment.pickup_carrier == SolidusPacketa.config.carrier && can?(:ship, shipment) %>
+  <p class="packeta-label" data-hook="admin_shipment_packeta_label">
+    <% if shipment.tracking.present? %>
+      <%= link_to t("solidus_packeta.label"), admin_shipment_packeta_label_path(shipment), target: "_blank", rel: "noopener" %>
+    <% elsif shipment.ready? %>
+      <%= button_to t("solidus_packeta.create"), admin_shipment_packeta_label_path(shipment), class: "btn btn-primary" %>
+    <% end %>
+  </p>
+<% end %>

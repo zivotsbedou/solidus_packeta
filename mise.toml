@@ -1,0 +1,9 @@
+[tools]
+ruby = "4.0.7"
+# ExecJS runtime for the admin assets the feature specs compile.
+bun = "1.4.2"
+
+[tasks.test]
+run = "bin/rake"
+[tasks.lint]
+run = "bundle exec rubocop"

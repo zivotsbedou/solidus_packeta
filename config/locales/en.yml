@@ -1,0 +1,11 @@
+en:
+  solidus_packeta:
+    create: Create Packeta label
+    label: Packeta label (PDF)
+    created: "Packeta packet %{tracking} created."
+    missing_weight: "Set the weight of %{products} before creating the Packeta label."
+    no_packet: This shipment has no Packeta packet yet.
+    not_packeta: This shipment does not go to a Packeta point.
+    not_ready: Only a ready shipment can get a Packeta label.
+    not_configured: The Packeta API password is not configured.
+    unavailable: "Packeta is unavailable: %{error}"

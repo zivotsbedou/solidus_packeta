@@ -1,0 +1,11 @@
+cs:
+  solidus_packeta:
+    create: Vytvořit štítek Zásilkovny
+    label: Štítek Zásilkovny (PDF)
+    created: "Zásilka %{tracking} je v Zásilkovně vytvořená."
+    missing_weight: "Než vytvoříš štítek Zásilkovny, doplň hmotnost u: %{products}."
+    no_packet: Tahle zásilka v Zásilkovně ještě není.
+    not_packeta: Tahle zásilka nejde na výdejní místo Zásilkovny.
+    not_ready: Štítek Zásilkovny jde vytvořit jen pro zásilku připravenou k odeslání.
+    not_configured: Chybí heslo k API Zásilkovny.
+    unavailable: "Zásilkovna teď neodpovídá: %{error}"

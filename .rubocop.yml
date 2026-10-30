@@ -1,0 +1,10 @@
+require:
+  - solidus_dev_support/rubocop
+
+AllCops:
+  NewCops: disable
+  TargetRubyVersion: 3.2
+  Exclude:
+    - sandbox/**/*
+    - spec/dummy/**/*
+    - vendor/**/*
