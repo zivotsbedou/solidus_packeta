@@ -12,6 +12,10 @@ connects it to Solidus:
 - **Weight from products.** The packet weight is the sum of the shipment's variant weights. A
   product without a weight stops the packet and is named in the message.
 
+- **Cancellation.** Canceling an order cancels its Packeta packets in a background job. Packeta
+  refuses this once a packet has been handed over; the job then retries and stays failed for staff
+  to resolve with Packeta.
+
 A shipment with a tracking number never creates a second packet. If Packeta refuses a packet or does
 not answer, the admin shows the reason and the shipment stays as it was.
 
