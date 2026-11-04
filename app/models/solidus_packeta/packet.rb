@@ -21,6 +21,13 @@ module SolidusPacketa
         shipment.tracking
       end
 
+      # Packeta refuses this once the packet has been handed over.
+      def cancel(shipment)
+        raise Error, I18n.t("solidus_packeta.no_packet") if shipment.tracking.blank?
+
+        request("cancelPacket", packetId: shipment.tracking)
+      end
+
       def label_pdf(shipment)
         raise Error, I18n.t("solidus_packeta.no_packet") if shipment.tracking.blank?
 

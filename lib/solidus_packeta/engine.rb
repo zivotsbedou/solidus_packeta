@@ -17,6 +17,11 @@ module SolidusPacketa
       SolidusPickupPoints.config.carriers[SolidusPacketa.config.carrier] ||= SolidusPacketa::POINT_ID
     end
 
+    # Solidus subscribes the listed classes on every code reload.
+    initializer "solidus_packeta.subscribers" do
+      Spree::Config.environment.subscribers << "SolidusPacketa::OrderSubscriber"
+    end
+
     config.generators do |g|
       g.test_framework :rspec
     end

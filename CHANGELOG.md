@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Cancel the Packeta packet when its order is canceled.
+
 ## 0.1.0
 
 - Register Packeta point IDs with solidus_pickup_points.
